@@ -3,6 +3,7 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image, ImageOps
 
+@st.cache_resource()
 def load_model():
     model = tf.keras.models.load_model('inceptionV3.h5')
     return model
